@@ -1,12 +1,12 @@
 ##
-## Made by PABLOleBG
+## Made by Pablotoudou
 ##
 
 SRC		=	src/main.c	\
 			src/request.c	\
 			src/client.c
 
-NAME	=	server
+NAME	=	pUTE
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -15,8 +15,6 @@ OBJ		=	$(SRC:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-# make -C lib/my
-# make clean -C lib/my
 		gcc -o $(NAME) $(OBJ) $(CFLAGS)
 
 clean:
@@ -25,7 +23,6 @@ clean:
 		rm -rf src/*~
 
 fclean:		clean
-# make fclean -C lib/my
 		rm -f $(NAME)
 
 re:		fclean all
