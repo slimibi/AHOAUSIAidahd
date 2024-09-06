@@ -6,10 +6,10 @@ void *handle_client(void *arg)
     char buffer[BUFFER_SIZE] = {0};
     read(client_socket, buffer, BUFFER_SIZE);
 
-    char method[16], path[256], version[16];
-    parse_request(buffer, method, path, version);
+    char method[16], path[256];
+    parse_request(buffer, method, path);
 
-    printf("Requête: %s %s %s\n", method, path, version);
+    printf("Requête: %s %s %s\n", method, path);
 
     if (strcmp(method, "GET") == 0 || strcmp(method, "HEAD") == 0)
         respond_with_file(client_socket, path, method);
