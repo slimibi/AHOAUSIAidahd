@@ -19,7 +19,7 @@
 #define ROOT_DIR "www"
 
 void *handle_client(void *arg);
-void parse_request( char *request, char *method, char *path, char *version);
+void parse_request( char *request, char *method, char *path);
 void respond_with_file(int client_socket,  char *path,  char *method);
 void list_directory(int client_socket,  char *dir_path);
 char *get_content_type( char *path);
