@@ -37,9 +37,9 @@ int main() {
     return 0;
 }
 
-void parse_request(char *request, char *method, char *path, char *version)
+void parse_request(char *request, char *method, char *path)
 {
-    sscanf(request, "%s %s %s", method, path, version);
+    sscanf(request, "%s %s", method, path);
 }
 
 void respond_with_file(int client_socket,  char *path,  char *method)
