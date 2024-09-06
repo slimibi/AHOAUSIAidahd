@@ -6,7 +6,7 @@ SRC		=	src/main.c	\
 			src/request.c	\
 			src/client.c
 
-NAME	=	pUTE
+NAME	=	server
 
 OBJ		=	$(SRC:.c=.o)
 
